@@ -16,10 +16,20 @@
 -->
 
 <resources>
+    <!-- main screen dimensions -->
+    <color name="main_screen_article_subtitle">#B000</color>
+
+    <!-- detail screen dimensions -->
+    <color name="detail_screen_background">#fff</color>
+    <color name="detail_screen_article_title">#fff</color>
+    <color name="detail_screen_article_byline">#8fff</color>
+    <color name="detail_screen_article_body">#C000</color>
+
+    <!-- dimensions common to both screens -->
     <color name="photo_placeholder">#ccc</color>
 
+    <!-- material design colors for app theme -->
     <color name="theme_primary">#009688</color>
     <color name="theme_primary_dark">#00796B</color>
     <color name="theme_accent">#FFAB40</color>
-    <color name="ltgray">#ffe0e0e0</color>
 </resources>
