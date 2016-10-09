@@ -5,7 +5,8 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 
 public class ArticleDetailFragmentImageView extends ImageView{
-    private float mAspectRatio = 1.5f;
+    private final float MIN_ASPECT_RATIO = 1.2f;
+    private float mAspectRatio = MIN_ASPECT_RATIO;
 
     public ArticleDetailFragmentImageView(Context context) {
         super(context);
@@ -20,7 +21,9 @@ public class ArticleDetailFragmentImageView extends ImageView{
     }
 
     public void setAspectRatio(float aspectRatio) {
-        mAspectRatio = aspectRatio;
+        if(aspectRatio > MIN_ASPECT_RATIO){
+            mAspectRatio = aspectRatio;
+        }
         requestLayout();
     }
 
