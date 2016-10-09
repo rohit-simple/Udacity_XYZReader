@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:background="?colorPrimary"
         android:id="@+id/toolbar_container"
-        android:elevation="4dp">
+        app:elevation="@dimen/app_bar_layout_elevation">
 
         <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
@@ -42,10 +42,10 @@
             android:layout_height="match_parent"
             android:clipToPadding="false"
             android:scrollbarStyle="outsideOverlay"
-            android:paddingTop="@dimen/list_padding_top_bottom"
-            android:paddingBottom="@dimen/list_padding_top_bottom"
-            android:paddingLeft="@dimen/list_padding_left_right"
-            android:paddingRight="@dimen/list_padding_left_right"/>
+            android:paddingTop="@dimen/recycler_view_vertical_padding"
+            android:paddingBottom="@dimen/recycler_view_vertical_padding"
+            android:paddingLeft="@dimen/recycler_view_horizontal_padding"
+            android:paddingRight="@dimen/recycler_view_horizontal_padding"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </android.support.design.widget.CoordinatorLayout>
