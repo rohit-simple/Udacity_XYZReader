@@ -94,7 +94,8 @@
         android:layout_marginRight="@dimen/fab_margin"
         android:layout_marginEnd="@dimen/fab_margin"
         android:stateListAnimator="@anim/fab_state_list_anim"
-        android:elevation="@dimen/fab_elevation"/>
+        app:pressedTranslationZ="12dp"
+        app:elevation="@dimen/fab_elevation"/>
 
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/scrollView"
