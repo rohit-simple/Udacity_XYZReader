@@ -5,8 +5,7 @@
     android:id="@+id/coordinator_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/detail_screen_background"
-    android:fitsSystemWindows="true">
+    android:background="@color/detail_screen_background">
 
     <ScrollView
         android:layout_width="match_parent"
