@@ -48,6 +48,7 @@ public class ArticleDetailFragment extends Fragment implements
 
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
     private CoordinatorLayout mCoordinatorLayout;
+    private String mTitle, mAuthor, mBody;
 
     private boolean mDetailIsCard = false;
 
@@ -97,6 +98,10 @@ public class ArticleDetailFragment extends Fragment implements
             Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
 
+        mTitle = getString(R.string.detail_default_title);
+        mAuthor = getString(R.string.detail_default_author);
+        mBody = getString(R.string.detail_default_body);
+
         if(mDetailIsCard){
             mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
             mCoordinatorLayout = (CoordinatorLayout) mRootView.findViewById(R.id.coordinator_layout);
@@ -110,7 +115,7 @@ public class ArticleDetailFragment extends Fragment implements
             public void onClick(View view) {
                 startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
                         .setType("text/plain")
-                        .setText("Some sample text")
+                        .setText(getString(R.string.share_start) + "\n\n" + mTitle + getString(R.string.detail_title_author_connector) + mAuthor + "\n" + mBody)
                         .getIntent(), getString(R.string.action_share)));
             }
         });
@@ -134,16 +139,19 @@ public class ArticleDetailFragment extends Fragment implements
             mRootView.setAlpha(0);
             mRootView.setVisibility(View.VISIBLE);
             mRootView.animate().alpha(1);
-            titleView.setText(mCursor.getString(ArticleLoader.Query.TITLE));
+            mTitle = mCursor.getString(ArticleLoader.Query.TITLE);
+            titleView.setText(mTitle);
+            mAuthor = mCursor.getString(ArticleLoader.Query.AUTHOR);
             bylineView.setText(Html.fromHtml(
                     DateUtils.getRelativeTimeSpanString(
                             mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE),
                             System.currentTimeMillis(), DateUtils.HOUR_IN_MILLIS,
                             DateUtils.FORMAT_ABBREV_ALL).toString()
                             + " by <font color='#ffffff'>"
-                            + mCursor.getString(ArticleLoader.Query.AUTHOR)
+                            + mAuthor
                             + "</font>"));
-            bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)));
+            mBody = mCursor.getString(ArticleLoader.Query.BODY);
+            bodyView.setText(Html.fromHtml(mBody));
             final float aspectRatio = mCursor.getFloat(ArticleLoader.Query.ASPECT_RATIO);
             ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
                     .get(mCursor.getString(ArticleLoader.Query.PHOTO_URL), new ImageLoader.ImageListener() {
