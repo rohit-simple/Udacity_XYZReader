@@ -18,6 +18,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.VolleyError;
@@ -41,8 +42,12 @@ public class ArticleDetailFragment extends Fragment implements
     private View mRootView;
     private int mMutedColor = 0xFF333333;
 
-    private ArticleDetailFragmentImageView mPhotoView;
+    private ArticleDetailFragmentImageView mCustomPhotoView;
+    private ImageView mPhotoView;
+
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
+
+    private boolean mDetailIsCard = false;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -67,6 +72,10 @@ public class ArticleDetailFragment extends Fragment implements
             mItemId = getArguments().getLong(ARG_ITEM_ID);
         }
 
+        if(getResources().getBoolean(R.bool.detail_is_card)){
+            mDetailIsCard = true;
+        }
+
         setHasOptionsMenu(true);
     }
 
@@ -85,9 +94,13 @@ public class ArticleDetailFragment extends Fragment implements
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
-        mCollapsingToolbarLayout = (CollapsingToolbarLayout) mRootView.findViewById(R.id.collapsing_toolbar);
 
-        mPhotoView = (ArticleDetailFragmentImageView) mRootView.findViewById(R.id.photo);
+        if(mDetailIsCard){
+            mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
+        }else{
+            mCustomPhotoView = (ArticleDetailFragmentImageView) mRootView.findViewById(R.id.photo);
+            mCollapsingToolbarLayout = (CollapsingToolbarLayout) mRootView.findViewById(R.id.collapsing_toolbar);
+        }
 
         mRootView.findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,11 +150,15 @@ public class ArticleDetailFragment extends Fragment implements
                             if (bitmap != null) {
                                 Palette p = Palette.generate(bitmap, 12);
                                 mMutedColor = p.getDarkMutedColor(0xFF333333);
-                                mPhotoView.setAspectRatio(aspectRatio);
-                                mPhotoView.setImageBitmap(imageContainer.getBitmap());
+                                if(mDetailIsCard){
+                                    mPhotoView.setImageBitmap(imageContainer.getBitmap());
+                                }else{
+                                    mCustomPhotoView.setAspectRatio(aspectRatio);
+                                    mCustomPhotoView.setImageBitmap(imageContainer.getBitmap());
+                                    mCollapsingToolbarLayout.setContentScrimColor(mMutedColor);
+                                }
                                 mRootView.findViewById(R.id.meta_bar)
                                         .setBackgroundColor(mMutedColor);
-                                mCollapsingToolbarLayout.setContentScrimColor(mMutedColor);
                             }
                         }
 
