@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.graphics.Palette;
 import android.text.Html;
@@ -46,6 +47,7 @@ public class ArticleDetailFragment extends Fragment implements
     private ImageView mPhotoView;
 
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
+    private CoordinatorLayout mCoordinatorLayout;
 
     private boolean mDetailIsCard = false;
 
@@ -97,6 +99,7 @@ public class ArticleDetailFragment extends Fragment implements
 
         if(mDetailIsCard){
             mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
+            mCoordinatorLayout = (CoordinatorLayout) mRootView.findViewById(R.id.coordinator_layout);
         }else{
             mCustomPhotoView = (ArticleDetailFragmentImageView) mRootView.findViewById(R.id.photo);
             mCollapsingToolbarLayout = (CollapsingToolbarLayout) mRootView.findViewById(R.id.collapsing_toolbar);
@@ -152,6 +155,7 @@ public class ArticleDetailFragment extends Fragment implements
                                 mMutedColor = p.getDarkMutedColor(0xFF333333);
                                 if(mDetailIsCard){
                                     mPhotoView.setImageBitmap(imageContainer.getBitmap());
+                                    mCoordinatorLayout.setBackgroundColor(mMutedColor);
                                 }else{
                                     mCustomPhotoView.setAspectRatio(aspectRatio);
                                     mCustomPhotoView.setImageBitmap(imageContainer.getBitmap());
