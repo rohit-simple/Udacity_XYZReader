@@ -52,24 +52,9 @@
                         android:orientation="vertical"
                         android:background="?android:colorPrimary">
 
-                        <TextView
-                            android:id="@+id/article_title"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:paddingBottom="@dimen/detail_meta_bar_title_padding_bottom"
-                            style="?android:attr/textAppearanceLarge"
-                            android:fontFamily="sans-serif-condensed"
-                            android:lineSpacingMultiplier="@fraction/detail_meta_bar_title_line_spacing_multiplier"
-                            android:textColor="@color/detail_screen_article_title"
-                            android:textSize="@dimen/detail_meta_bar_title_text_size"
-                            android:textStyle="bold" />
+                        <include layout="@layout/detail_textview_article_title" />
 
-                        <TextView
-                            android:id="@+id/article_byline"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            style="?android:attr/textAppearanceSmall"
-                            android:textColor="@color/detail_screen_article_byline" />
+                        <include layout="@layout/detail_textview_article_byline" />
                     </LinearLayout>
 
                     <FrameLayout
@@ -81,20 +66,7 @@
                         android:paddingBottom="@dimen/detail_body_parent_bottom_padding"
                         android:background="@color/detail_screen_background">
 
-                        <TextView
-                            android:id="@+id/article_body"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:paddingLeft="@dimen/detail_body_horizontal_padding"
-                            android:paddingRight="@dimen/detail_body_horizontal_padding"
-                            android:paddingTop="@dimen/detail_body_top_padding"
-                            android:paddingBottom="@dimen/detail_body_bottom_padding"
-                            style="?android:attr/textAppearanceMedium"
-                            android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
-                            android:textColor="@color/detail_screen_article_body"
-                            android:textColorLink="@color/theme_accent"
-                            android:textSize="@dimen/detail_body_text_size" />
+                        <include layout="@layout/detail_textview_article_body" />
                     </FrameLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>

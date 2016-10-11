@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/article_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/detail_meta_bar_title_padding_bottom"
+    style="?android:attr/textAppearanceLarge"
+    android:fontFamily="sans-serif-condensed"
+    android:lineSpacingMultiplier="@fraction/detail_meta_bar_title_line_spacing_multiplier"
+    android:textColor="@color/detail_screen_article_title"
+    android:textSize="@dimen/detail_meta_bar_title_text_size"
+    android:textStyle="bold" />

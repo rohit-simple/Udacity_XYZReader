@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/article_body"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:paddingLeft="@dimen/detail_body_horizontal_padding"
+    android:paddingRight="@dimen/detail_body_horizontal_padding"
+    android:paddingTop="@dimen/detail_body_top_padding"
+    android:paddingBottom="@dimen/detail_body_bottom_padding"
+    style="?android:attr/textAppearanceMedium"
+    android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
+    android:textColor="@color/detail_screen_article_body"
+    android:textColorLink="@color/theme_accent"
+    android:textSize="@dimen/detail_body_text_size" />
