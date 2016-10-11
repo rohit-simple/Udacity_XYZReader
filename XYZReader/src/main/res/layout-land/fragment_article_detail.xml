@@ -76,9 +76,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/detail_body_parent_bottom_margin"
-                        android:layout_marginTop="@dimen/detail_body_parent_top_margin"
-                        android:layout_marginLeft="@dimen/detail_body_parent_horizontal_margin"
-                        android:layout_marginRight="@dimen/detail_body_parent_horizontal_margin"
+                        android:layout_marginTop="@dimen/detail_body_parent_top_padding"
+                        android:layout_marginLeft="@dimen/detail_body_parent_horizontal_padding"
+                        android:layout_marginRight="@dimen/detail_body_parent_horizontal_padding"
                         android:background="@color/detail_screen_background">
 
                         <TextView
