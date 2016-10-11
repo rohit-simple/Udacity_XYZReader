@@ -3,7 +3,6 @@
     <!-- detail -->
     <dimen name="detail_card_view_width">400dp</dimen>
     <dimen name="detail_card_view_margin_top">250dp</dimen>
-    <dimen name="detail_body_parent_bottom_margin">16dp</dimen>
     <dimen name="detail_body_bottom_padding">16dp</dimen>
 
     <!-- referenced from code -->
