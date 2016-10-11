@@ -54,6 +54,19 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/detail_body_parent_horizontal_padding"
+        android:paddingRight="@dimen/detail_body_parent_horizontal_padding"
+        android:paddingTop="@dimen/detail_body_parent_top_padding"
+        android:paddingBottom="@dimen/detail_body_parent_bottom_padding"
+        android:background="@color/detail_screen_background"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include layout="@layout/detail_textview_article_body" />
+    </android.support.v4.widget.NestedScrollView>
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/share_fab"
         android:layout_width="wrap_content"
@@ -67,18 +80,5 @@
         android:contentDescription="@string/action_share"
         android:src="@drawable/ic_share"
         app:fabSize="normal" />
-
-    <android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/detail_body_parent_horizontal_padding"
-        android:paddingRight="@dimen/detail_body_parent_horizontal_padding"
-        android:paddingTop="@dimen/detail_body_parent_top_padding"
-        android:paddingBottom="@dimen/detail_body_parent_bottom_padding"
-        android:background="@color/detail_screen_background"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <include layout="@layout/detail_textview_article_body" />
-    </android.support.v4.widget.NestedScrollView>
 
 </android.support.design.widget.CoordinatorLayout>
