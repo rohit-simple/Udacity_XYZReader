@@ -4,24 +4,26 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-public class ArticleDetailFragmentImageView extends ImageView {
-    private final float DEFAULT_ASPECT_RATIO = 1.5f;
-    private float mAspectRatio = DEFAULT_ASPECT_RATIO;
+public class ArticleDetailFragmentImageViewLimited extends ImageView{
+    private final float MIN_ASPECT_RATIO = 1.2f;
+    private float mAspectRatio = MIN_ASPECT_RATIO;
 
-    public ArticleDetailFragmentImageView(Context context) {
+    public ArticleDetailFragmentImageViewLimited(Context context) {
         super(context);
     }
 
-    public ArticleDetailFragmentImageView(Context context, AttributeSet attrs) {
+    public ArticleDetailFragmentImageViewLimited(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public ArticleDetailFragmentImageView(Context context, AttributeSet attrs, int defStyle) {
+    public ArticleDetailFragmentImageViewLimited(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
     public void setAspectRatio(float aspectRatio) {
-        mAspectRatio = aspectRatio;
+        if(aspectRatio > MIN_ASPECT_RATIO){
+            mAspectRatio = aspectRatio;
+        }
         requestLayout();
     }
 
