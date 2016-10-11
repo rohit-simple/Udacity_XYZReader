@@ -13,7 +13,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.util.TypedValue;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowInsets;
 
 import com.example.xyzreader.R;
@@ -30,7 +29,6 @@ public class ArticleDetailActivity extends ActionBarActivity
     private long mStartId;
 
     private long mSelectedItemId;
-    private int mSelectedItemUpButtonFloor = Integer.MAX_VALUE;
     private int mTopInset;
 
     private ViewPager mPager;
@@ -141,7 +139,7 @@ public class ArticleDetailActivity extends ActionBarActivity
 
     private void updateUpButtonPosition() {
         int upButtonNormalBottom = mTopInset + mUpButton.getHeight();
-        mUpButton.setTranslationY(Math.min(mSelectedItemUpButtonFloor - upButtonNormalBottom, 0));
+        mUpButton.setTranslationY(Math.min(Integer.MAX_VALUE - upButtonNormalBottom, 0));
     }
 
     private class MyPagerAdapter extends FragmentStatePagerAdapter {
