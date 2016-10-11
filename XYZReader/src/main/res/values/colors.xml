@@ -17,13 +17,13 @@
 
 <resources>
     <!-- main screen dimensions -->
-    <color name="main_screen_article_subtitle">#B000</color>
+    <color name="main_screen_article_subtitle">#C000</color>
 
     <!-- detail screen dimensions -->
     <color name="detail_screen_background">#fff</color>
     <color name="detail_screen_article_title">#fff</color>
     <color name="detail_screen_article_byline">#8fff</color>
-    <color name="detail_screen_article_body">#C000</color>
+    <color name="detail_screen_article_body">#000</color>
 
     <!-- dimensions common to both screens -->
     <color name="photo_placeholder">#ccc</color>

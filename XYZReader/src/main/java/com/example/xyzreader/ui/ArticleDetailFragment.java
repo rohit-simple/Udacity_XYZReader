@@ -105,6 +105,7 @@ public class ArticleDetailFragment extends Fragment implements
         if(mDetailIsCard){
             mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
             mCoordinatorLayout = (CoordinatorLayout) mRootView.findViewById(R.id.coordinator_layout);
+            (mRootView.findViewById(R.id.meta_bar)).setBackgroundColor(getResources().getColor(R.color.theme_primary));
         }else{
             mCustomPhotoView = (ArticleDetailFragmentImageView) mRootView.findViewById(R.id.photo);
             mCollapsingToolbarLayout = (CollapsingToolbarLayout) mRootView.findViewById(R.id.collapsing_toolbar);
