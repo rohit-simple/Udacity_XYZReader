@@ -1,15 +1,23 @@
 <resources>
-    <!-- detail -->
-    <dimen name="detail_title_text_size">42sp</dimen>
-    <dimen name="detail_body_text_size">20sp</dimen>
-    <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.3</item>
-    <dimen name="fab_margin">24dp</dimen>
+    <!-- main screen -->
+    <dimen name="recycler_view_vertical_padding">16dp</dimen>
+    <dimen name="recycler_view_horizontal_padding">16dp</dimen>
+    <dimen name="recycler_view_item_margin">16dp</dimen>
+    <dimen name="main_screen_article_title_padding_bottom">8dp</dimen>
+    <dimen name="main_screen_article_title_text_size">18sp</dimen>
+    <dimen name="main_screen_article_subtitle_text_size">16sp</dimen>
 
     <!-- detail -->
-    <dimen name="detail_photo_height">384dp</dimen>
-    <dimen name="detail_card_top_margin">384dp</dimen>
-    <dimen name="detail_inner_horiz_margin">64dp</dimen>
-    <dimen name="detail_metabar_vert_padding">32dp</dimen>
-    <dimen name="detail_metabar_title_bottom_padding">8dp</dimen>
-    <dimen name="detail_body_bottom_margin">96dp</dimen>
+    <dimen name="detail_meta_bar_vertical_padding">24dp</dimen>
+    <dimen name="detail_meta_bar_horizontal_padding">56dp</dimen>
+    <dimen name="detail_meta_bar_title_padding_bottom">8dp</dimen>
+    <dimen name="detail_meta_bar_title_text_size">36sp</dimen>
+    <dimen name="detail_meta_bar_byline_text_size">18sp</dimen>
+    <dimen name="detail_body_parent_vertical_padding">24dp</dimen>
+    <dimen name="detail_body_parent_horizontal_padding">24dp</dimen>
+    <dimen name="detail_body_horizontal_padding">32dp</dimen>
+    <dimen name="detail_body_top_padding">24dp</dimen>
+    <dimen name="detail_body_text_size">26sp</dimen>
+    <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.3</item>
+
 </resources>

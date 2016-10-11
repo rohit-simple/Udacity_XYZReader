@@ -30,6 +30,7 @@
             android:paddingRight="@dimen/main_screen_article_title_padding"
             android:paddingBottom="@dimen/main_screen_article_title_padding_bottom"
             android:ellipsize="end"
+            android:textSize="@dimen/main_screen_article_title_text_size"
             android:maxLines="4" />
 
         <TextView
@@ -41,6 +42,7 @@
             android:paddingRight="@dimen/main_screen_article_subtitle_padding"
             android:paddingBottom="@dimen/main_screen_article_subtitle_padding"
             android:textColor="@color/main_screen_article_subtitle"
+            android:textSize="@dimen/main_screen_article_subtitle_text_size"
             android:maxLines="1"
             android:ellipsize="end" />
     </LinearLayout>

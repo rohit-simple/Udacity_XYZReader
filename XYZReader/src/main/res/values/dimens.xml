@@ -6,15 +6,17 @@
     <dimen name="main_screen_article_title_padding">16dp</dimen>
     <dimen name="main_screen_article_title_padding_bottom">4dp</dimen>
     <dimen name="main_screen_article_subtitle_padding">16dp</dimen>
+    <dimen name="main_screen_article_title_text_size">16sp</dimen>
+    <dimen name="main_screen_article_subtitle_text_size">14sp</dimen>
 
     <!-- detail -->
     <dimen name="detail_up_button_width">56dp</dimen>
     <dimen name="detail_meta_bar_vertical_padding">16dp</dimen>
-    <dimen name="detail_meta_bar_horizontal_padding">16dp</dimen>
+    <dimen name="detail_meta_bar_horizontal_padding">32dp</dimen>
     <dimen name="detail_meta_bar_title_padding_bottom">4dp</dimen>
     <dimen name="detail_meta_bar_title_text_size">32sp</dimen>
-    <dimen name="detail_body_parent_top_padding">16dp</dimen>
-    <dimen name="detail_body_parent_bottom_padding">16dp</dimen>
+    <dimen name="detail_meta_bar_byline_text_size">14sp</dimen>
+    <dimen name="detail_body_parent_vertical_padding">16dp</dimen>
     <dimen name="detail_body_parent_horizontal_padding">16dp</dimen>
     <dimen name="detail_body_horizontal_padding">16dp</dimen>
     <dimen name="detail_body_top_padding">16dp</dimen>

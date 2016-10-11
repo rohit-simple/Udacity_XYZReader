@@ -4,5 +4,5 @@
     android:id="@+id/article_byline"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    style="?android:attr/textAppearanceSmall"
+    android:textSize="@dimen/detail_meta_bar_byline_text_size"
     android:textColor="@color/detail_screen_article_byline" />
